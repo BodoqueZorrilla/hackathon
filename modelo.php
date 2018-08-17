@@ -1,10 +1,9 @@
 <?php
 
 require_once("config.php");
-
 class Modelo{
-    private $conn;
 
+    private $conn;
     public function __construct(){
 
         $this->conn=new mysqli(SRV,USR,PWD,DB);
@@ -13,13 +12,8 @@ class Modelo{
             echo "Fallo Mysql: ". $this->_db->connect_error();
             return;
         }
-
         $this->conn->set_charset(DB_CHARSET);
     }
-
-    /*public function __destruct(){
-        $this->conn->close();
-    }*/
 
     public function consulta($sql){
         $aut=array();
@@ -32,6 +26,9 @@ class Modelo{
         $this->conn->close();
         return $aut;
     }
+
 }
+
+
 
 ?>
