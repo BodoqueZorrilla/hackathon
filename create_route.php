@@ -1,7 +1,9 @@
 <?php
 require_once("modelo.php");
 $response["success"] = 1;
-echo json_encode($response);
+$parametros = $_REQUEST['parametros'];
+$json_par = json_decode($parametros, true);
+echo json_encode($json_par);
 /*$parametros = $_REQUEST['parametros'];
 
 $json_par = json_decode($parametros, true);
