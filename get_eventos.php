@@ -7,7 +7,7 @@ require_once("modelo.php");
 $id_ruta = $_REQUEST['id_ruta'];
 $modelo=new Modelo();
 
-$getCamiones=$modelo->consulta("CALL get_evento($id_ruta);");
+$getCamiones=$modelo->consulta("CALL get_eventos($id_ruta);");
 
 if(count($getCamiones) > 0){
   $response["eventos"] = array();
