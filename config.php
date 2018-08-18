@@ -1,7 +1,7 @@
 <?php
 define ('SRV','localhost');
 define ('DB','hackathon');
-define ('USR','root');
-define ('PWD','root');
+define ('USR','bodoque');
+define ('PWD','bodoque');
 define("DB_CHARSET", "utf8");
 ?>

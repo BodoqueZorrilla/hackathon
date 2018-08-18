@@ -9,8 +9,10 @@ $getChoferes=$modelo->consulta("CALL getChoferes($id_empresa);");
 
 if(count($getChoferes) > 0){
   foreach ($getChoferes as $key => $value) {
-    $response["id"] = (int)$value['id'];
-    $response["nombre"] = $value['nombre'];
+    $choferes = array();
+    $choferes["id"] = (int)$value['id'];
+    $choferes["nombre"] = $value['nombre'];
+    array_push($response["choferes"], $choferes);
   }
   $response["success"] = 1;
   echo json_encode($response);
