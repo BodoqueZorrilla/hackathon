@@ -3,6 +3,9 @@ require_once("modelo.php");
 $response["success"] = 1;
 $parametros = $_REQUEST['parametros'];
 $json_par = json_decode($parametros, true);
+foreach ($json_par as $key => $value1) {
+  $response["hola"] = $value1["id_empresa"];
+}
 echo json_encode($response);
 /*$parametros = $_REQUEST['parametros'];
 
