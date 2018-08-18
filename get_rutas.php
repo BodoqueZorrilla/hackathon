@@ -14,7 +14,9 @@ if(count($getCamiones) > 0){
   foreach ($getCamiones as $key => $value) {
     $rutas = array();
     $rutas["id"] = (int)$value['id'];
-    $rutas["placas"] = $value['placas'];
+    $rutas["nombre"] = $value['nombre'];
+    $rutas["fch_inicio"] = $value['hora_inicio'];
+    $rutas["fch_fin"] = $value['hora_fin'];
     array_push($response["rutas"], $rutas);
   }
   $response["success"] = 1;
