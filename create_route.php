@@ -8,7 +8,7 @@ $coord_inicio = $_REQUEST['coord_inicio'];
 $coord_fin = $_REQUEST['coord_fin'];
 $fch_ini = $_REQUEST['fch_ini'];
 $fch_fn = $_REQUEST['fch_fn'];
-
+echo "CALL ADD_ROUTE('".$id_empresa."', '".$id_chofer.", '".$id_camion.", '".$coord_inicio.",'".$coord_fin.",'".$fch_ini.",'".$fch_fn.");";
 $modelo=new Modelo();
 $crea_route=$modelo->consulta("CALL ADD_ROUTE('".$id_empresa."', '".$id_chofer.", '".$id_camion.", '".$coord_inicio.",'".$coord_fin.",'".$fch_ini.",'".$fch_fn.");");
 
