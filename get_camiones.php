@@ -10,6 +10,7 @@ $modelo=new Modelo();
 $getChoferes=$modelo->consulta("CALL getCamiones($id_empresa);");
 
 if(count($getCamiones) > 0){
+  $response["camiones"] = array();
   foreach ($getCamiones as $key => $value) {
     $camiones = array();
     $camiones["id"] = (int)$value['id'];

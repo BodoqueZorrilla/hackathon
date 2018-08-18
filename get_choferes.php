@@ -8,6 +8,7 @@ $modelo=new Modelo();
 $getChoferes=$modelo->consulta("CALL getChoferes($id_empresa);");
 
 if(count($getChoferes) > 0){
+  $response["choferes"] = array();
   foreach ($getChoferes as $key => $value) {
     $choferes = array();
     $choferes["id"] = (int)$value['id'];
